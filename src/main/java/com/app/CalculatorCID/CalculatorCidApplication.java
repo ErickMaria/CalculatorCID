@@ -1,12 +1,12 @@
-package com.app.ApplCID;
+package com.app.CalculatorCID;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ApplicationCidApplication {
+public class CalculatorCidApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ApplicationCidApplication.class, args);
+		SpringApplication.run(CalculatorCidApplication.class, args);
 	}
 }
