@@ -1,0 +1,38 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: calculatorcid-service
+spec:
+  selector:
+    app: calculatorcid
+  type: NodePort
+  ports:  
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+      nodePort: 30343
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: calculatorcid-deployment
+  labels:
+    app: calculatorcid
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: calculatorcid
+  template:
+    metadata:
+      labels:
+        app: calculatorcid
+    spec:
+      imagePullSecrets:
+      - name: pipeline-docker-registry
+      containers:
+      - name: maven
+        image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
+        ports:
+        - containerPort: 8080

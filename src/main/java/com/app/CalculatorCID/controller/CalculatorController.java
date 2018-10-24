@@ -9,7 +9,7 @@ import com.app.CalculatorCID.model.BasicCaculator;
 import com.app.CalculatorCID.model.ChoiceOperator;
 import com.app.CalculatorCID.model.ConvertOperator;
 
-@RestController()
+@Controller()
 public class CalculatorController {
 	
 	@RequestMapping(value = "calculate/{number1}/{operator}/{number2}", method = RequestMethod.GET)
