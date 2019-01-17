@@ -56,16 +56,18 @@
 
 	</dependencies>
 	
-	<repository>
-	  <id>dev-azure-com-edinirferreira-teste</id>
-	  <url>https://pkgs.dev.azure.com/edinirferreira/_packaging/Teste/maven/v1</url>
-	  <releases>
-	    <enabled>true</enabled>
-	  </releases>
-	  <snapshots>
-	    <enabled>true</enabled>
-	  </snapshots>
-	</repository>
+	<repositories>
+		<repository>
+			  <id>dev-azure-com-edinirferreira-teste</id>
+			  <url>https://pkgs.dev.azure.com/edinirferreira/_packaging/Teste/maven/v1</url>
+			  <releases>
+				<enabled>true</enabled>
+			  </releases>
+			  <snapshots>
+				<enabled>true</enabled>
+			  </snapshots>
+		</repository>
+	</repositories>
 	
 	<build>
 		<plugins>
